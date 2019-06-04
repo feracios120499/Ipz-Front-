@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,7 +67,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Components\News\Controllers\DetailNewsCtrl.js" />
+    <Content Include="app\Components\News\Views\detailNews.html" />
     <Content Include="packages.config" />
+    <Content Include="app\Assests\js\angular\angular.min.js.gzip" />
+    <Content Include="app\Assests\js\angular\angular.min.js.map" />
+    <Content Include="app\Assests\js\angular\bower.json" />
+    <Content Include="app\Assests\js\angular\LICENSE.md" />
+    <Content Include="app\Assests\js\angular\package.json" />
+    <Content Include="app\Assests\js\angular\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,10 +84,58 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="app\Assests\css\creative.css" />
+    <Content Include="app\Assests\css\creative.min.css" />
+    <Content Include="app\Assests\css\nicepage.css" />
+    <Content Include="app\Assests\css\achiv.css" />
+    <Content Include="app\Assests\img\anu.png" />
+    <Content Include="app\Assests\img\header-services.jpg" />
+    <Content Include="app\Assests\img\header-student.jpg" />
+    <Content Include="app\Assests\img\header-teacher.jpg" />
+    <Content Include="app\Assests\img\header.jpg" />
+    <Content Include="app\Assests\img\label-01.svg" />
+    <Content Include="app\Assests\img\label2.svg" />
+    <Content Include="app\Assests\img\sb.jpg" />
+    <Content Include="app\Assests\js\angular-ui-router.min.js" />
+    <Content Include="app\Assests\js\angular\angular-csp.css" />
+    <Content Include="app\Assests\js\angular\angular.js" />
+    <Content Include="app\Assests\js\angular\angular.min.js" />
+    <Content Include="app\Assests\js\angular\index.js" />
+    <Content Include="app\Assests\js\app.js" />
+    <Content Include="app\Assests\js\creative.js" />
+    <Content Include="app\Assests\js\creative.min.js" />
+    <Content Include="app\Assests\js\match-media.js" />
+    <Content Include="app\Assests\js\nicepage.js" />
+    <Content Include="app\Assests\js\readmore.min.js" />
+    <Content Include="app\Components\Achievement\Controllers\AchievementCtrl.js" />
+    <Content Include="app\Components\Achievement\Views\achievements.html" />
+    <Content Include="app\Components\Applicant\Controllers\ApplicantCtrl.js" />
+    <Content Include="app\Components\Applicant\Views\applicant.html" />
+    <Content Include="app\Components\Home\Controllers\HomeCtrl.js" />
+    <Content Include="app\Components\Home\Views\home.html" />
+    <Content Include="app\Components\News\Controllers\NewsCtrl.js" />
+    <Content Include="app\Components\News\Views\news.html" />
+    <Content Include="app\Components\Services\Controllers\ServiceCtrl.js" />
+    <Content Include="app\Components\Services\Views\services.html" />
+    <Content Include="app\Components\Teacher\Controllers\TeacherCtrl.js" />
+    <Content Include="app\Components\Teacher\Views\teachers.html" />
+    <Content Include="index.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\Assests\img\clients\" />
+    <Folder Include="app\Assests\img\lang\" />
+    <Folder Include="app\Assests\img\portfolio\" />
+    <Folder Include="app\Assests\vendor\bootstrap\" />
+    <Folder Include="app\Assests\vendor\font-awesome\" />
+    <Folder Include="app\Assests\vendor\jquery\" />
+    <Folder Include="app\Assests\vendor\magnific-popup\" />
+    <Folder Include="app\Assests\vendor\scrollreveal\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

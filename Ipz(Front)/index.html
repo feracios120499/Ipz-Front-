@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кафедра програмних систем і технологій</title>
+    <link rel="shortcut icon" href="app/Assests/img/pst_logo.png" type="image/png">
+    <link href="app/Assests/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="app/Assests/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="app/Assests/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <script src="app/Assests/js/angular/angular.min.js"></script>
+    <script src="app/Assests/Js/angular-ui-router.min.js"></script>
+    <script src="app/Assests/Js/ocLazyLoad.min.js"></script>
+    <!--<script src="app/Assests/js/ui-bootstrap-tpls-2.5.0.min.js"></script>-->
+    <!-- Theme CSS -->
+    <link href="app/Assests/css/creative.css" rel="stylesheet">
+    <script src="app/Assests/js/app.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/iv-viewer/dist/iv-viewer.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141325335-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141325335-1');
+</script>
+
+    <link rel="stylesheet" href="https://unpkg.com/iv-viewer/dist/iv-viewer.css">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#subjects').on("show.bs.collapse", function () {
+                $('#subButton').removeClass('rotate-wise');
+                $('#subButton').addClass('rotate');
+            });
+            $('#subjects').on("hidden.bs.collapse", function () {
+                $('#subButton').removeClass('rotate');
+                $('#subButton').addClass('rotate-wise');
+
+            });
+            $('#subjects2').on("show.bs.collapse", function () {
+                $('#subButton2').removeClass('rotate-wise');
+                $('#subButton2').addClass('rotate');
+            });
+            $('#subjects2').on("hidden.bs.collapse", function () {
+                $('#subButton2').removeClass('rotate');
+                $('#subButton2').addClass('rotate-wise');
+
+            });
+            $('#subjects3').on("show.bs.collapse", function () {
+                $('#subButton3').removeClass('rotate-wise');
+                $('#subButton3').addClass('rotate');
+            });
+            $('#subjects3').on("hidden.bs.collapse", function () {
+                $('#subButton3').removeClass('rotate');
+                $('#subButton3').addClass('rotate-wise');
+
+            });
+        });
+    </script>
+</head>
+<body class="nav-md" ng-app="ipzSite">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Меню <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" ui-sref="home">Кафедра ПСТ</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a ui-sref="applicant">Абітурієнту</a>
+                        <ul class="dropdown-menu nav hidden-sm-down">
+                            <li><a class="page-scroll" href="/applicant#services">Навчальний план</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a ui-sref="student">Студенту</a>
+                        <ul class="dropdown-menu nav hidden-sm-down">
+                            <li><a class="page-scroll" href="/student#services">Спеціалізації</a></li>
+                        </ul>
+                    </li>
+                    <li><a ui-sref="achievements">Досягнення</a></li>
+                    <li>
+                        <a ui-sref="teachers">Співробітники</a>
+                    </li>
+                    <li>
+                        <a ui-sref="news">Новини</a>
+                    </li>
+                    <li class="dropdown hidden-xs">
+                        <a href="#">Події</a>
+                        <ul class="dropdown-menu nav hidden-sm-down">
+                            <li><a onclick="window.location = 'http://olimp.knu.ua';" target="_blank" style="cursor:pointer">Олімпіада</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown hidden-xs">
+                        <a href="#">Інше</a>
+                        <ul class="dropdown-menu nav hidden-sm-down">
+                            <li><a ui-sref="services">Послуги</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="traineeship">Аспірантура</a></li>
+                        </ul>
+                    </li>
+                    <li class="visible-xs"><a onclick="window.location = 'http://olimp.knu.ua';" target="_blank" style="cursor:pointer">Олімпіада</a></li>
+                    <li class="visible-xs"><a href="services.html">Послуги</a></li>
+                    <li class="visible-xs"><a ui-sref="traineeship">Аспірантура</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <ui-view autoscroll></ui-view>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Давайте зв'яжемося</h2>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>(066) 430-5432</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:your-email@your-domain.com">it.olmp.urkaine@gmail.com</a></p>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12  text-center">
+                        <h2 class="section-heading">Ми знаходимось тут</h2>
+                        <hr class="primary">
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <p class="text-muted">
+                            м. Київ,
+                            вул. Ванди Василевської, 24,
+                            кафедра Програмних систем і технологій
+                            факультету інформаційних технологій
+                            Київського національного університету
+                            імені Тараса Шевченка
+                        </p>
+                    </div>
+                    <div class="col-lg-12  text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.2265968465567!2d30.47185181610942!3d50.45550497947607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce80bb14c36b%3A0x5c4eb5067e6b48c6!2z0LLRg9C70LjRhtGPINCS0LDQvdC00Lgg0JLQsNGB0LjQu9C10LLRgdGM0LrQvtGXLCAyNCwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1488049688560" width="90%" height="320" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="feedback">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Відгуки про нас</h2>
+                    <hr class="primary">
+                </div>
+                <div class="col-md-12">
+                    <div id="mc-review"></div>
+                    <script type="text/javascript">
+                        cackle_widget = window.cackle_widget || [];
+                        cackle_widget.push({ widget: 'Review', id: 66300 });
+                        (function () {
+                            var mc = document.createElement('script');
+                            mc.type = 'text/javascript';
+                            mc.async = true;
+                            mc.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cackle.me/widget.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+                        })();
+                    </script>
+                    <a id="mc-link" href="http://cackle.me">Отзывы для сайта <b style="color:#4FA3DA">Cackl</b><b style="color:#F65077">e</b></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="flex: 0 0 auto;">
+        &copy; Київський національний університет імені Тараса Шевченка Кафедра Програмних систем і технологій
+    </footer>
+    <!-- jQuery -->
+    <script src="app/Assests/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="app/Assests/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="app/Assests/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="app/Assests/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="app/Assests/js/creative.min.js"></script>
+    <script src="app/Components/Home/Controllers/HomeCtrl.js"></script>
+    <script src="app/Components/News/Controllers/NewsCtrl.js"></script>
+    <script src="app/Components/News/Controllers/DetailNewsCtrl.js"></script>
+    <script src="app/Components/Applicant/Controllers/ApplicantCtrl.js"></script>
+    <script src="app/Components/Achievement/Controllers/AchievementCtrl.js"></script>
+    <script src="app/Components/Teacher/Controllers/TeacherCtrl.js"></script>
+    <script src="app/Components/Services/Controllers/ServiceCtrl.js"></script>
+    <script src="app/Components/Student/Controllers/StudentCtrl.js"></script>
+    <script src="app/Components/Traineeship/Controllers/TraineeshipCtrl.js"></script>
+</body>
+</html>

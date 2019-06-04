@@ -1,0 +1,47 @@
+﻿<header id="teacher">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">Наша мета</h1>
+            <hr>
+            <p>Завдання викладачів кафедри навчити студентів розв’язувати задачі, що пов’язані з написанням програмного і мікропрограмного забезпечення для вбудованих мікроконтролерів</p>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Наша команда</h2>
+            <hr class="primary">
+        </div>
+    </div>
+    <div class="col-md-12">
+
+        <div class="col-md-12" ng-repeat="teacher in teachers" ng-init="teacher.color=getRandomColor()">
+            <a data-toggle="collapse" data-target="#teacher{{teacher.Id}}" style="text-decoration:none;cursor:pointer" ng-click="collapsed(teacher)">
+                <div class="trapezium" style="border-bottom-color:{{teacher.color}}">
+                    <h4 ng-show="!isMobile" style="padding-left:30px;padding-top:5px;">{{teacher.Name}}</h4>
+                    <h4 ng-show="isMobile">{{getShortName(teacher.Name)}}</h4>
+                </div>
+            </a>
+            <div class="teacher">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-2 col-md-2   text-center">
+                        <img style="object-fit: cover; object-position:40% 0" class="photo-user" ng-class="{'photo-user-big':teacher.collapse,'photo-user':!teacher.collapse}" src="data:image/png;base64,{{teacher.Image}}" width="75" height="75" />
+                    </div>
+
+                    <div class="collapse col-md-10 col-sm-10 col-xs-12" id="teacher{{teacher.Id}}" aria-expanded="false">
+                        <div class="col-md-12" ng-repeat="detail in teacher.Details">
+                            <h2 class="label-bold">{{detail.Title}}</h2>
+                            <p ng-bind-html="trustAsHtml(detail.Text)"></p>
+                        </div>
+                    </div>
+                    <div style="position:absolute;right:15px;top:45px">
+                        <a class="collapseRef" id="#collapseRef{{teacher.Id}}" data-toggle="collapse" data-target="#teacher{{teacher.Id}}" style="text-decoration:none;display:inline;color:{{teacher.color}}" ng-click="collapsed(teacher)">
+                            <span ng-class="{'rotate':teacher.collapse,'rotate-wise':!teacher.collapse}" class="pull-right rotate-wise glyphicon glyphicon-chevron-down" style="margin-top:15px;font-size:24px"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

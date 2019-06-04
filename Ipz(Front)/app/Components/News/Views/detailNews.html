@@ -1,0 +1,26 @@
+﻿
+<header id="news">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">НОВИНИ</h1>
+            <hr>
+            <p>Читайте новини та будьте перші в курсі усіх подій та західів на нашій кафедрі</p>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="col-md-12">
+
+        <div class="col-md-12" style="margin-top:20px">
+            <div style="width:90%;margin:0% 5% 0% 5%">
+                <div class="text-center" id="title">
+                    <img class="text-center" src="data:image/png;base64,{{news.Image}}" alt="Card image cap" style="border-radius:5%;height:400px;width:auto;margin:auto;max-width:90%">
+                </div>
+                <h1 class="text-center" >{{news.Title}}</h1>
+                <span ng-bind-html="trustAsHtml(news.Text)"></span>
+                <img ng-repeat="image in news.Images" src="data:image/png;base64,{{image.base64}}" class="image-news" />
+            </div>
+        </div>
+    </div>
+</section>
+
